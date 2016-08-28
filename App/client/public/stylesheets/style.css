@@ -1,0 +1,207 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+a:link, a:hover, a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.clearfix {
+    display: table;
+}
+
+header {
+    border: 3px solid black;
+    min-width: 980px;
+}
+
+.header-content {
+    width: 980px;
+    margin: 0 auto;
+    display: table;
+    padding: 10px 0;
+}
+
+.header-content h1 {
+    float: left;
+    margin: 0;
+}
+
+.cat-nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.cat-nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.cat-nav li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.cat-links {
+    background: #D9DDDE;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+}
+
+.cat-links:hover {
+    background: #F52A2D;
+    color: white; 
+}
+
+.category-img {
+    width: 100%;
+}
+
+.category-short-desc {
+    margin-top: 15px;
+}
+
+.main-content {
+    width: 980px;
+    margin: 0 auto;
+    display: table;
+}
+
+.breadcrumbs-container {
+    width: 980px;
+    margin: 20px auto;
+}
+
+.breadcrumbs {
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main-cat-name {
+    text-transform: uppercase;
+    color: red;
+}
+
+.product-desc {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    float: left;
+}
+
+.pdp-link  {
+    float: right;
+    background: #D9DDDE;
+    border: 2px solid black;
+    color: black;
+    padding: 0 5px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.product-short-desc {
+    height: 100px;
+    overflow-y: auto;
+}
+
+.product-link {
+    margin-top: 15px;
+}
+
+.product-main {
+    margin-top: 100px;
+    position: relative;
+}
+
+.product-main-image {
+    float: left;
+    width: 45%;
+}
+
+.product-subnail {
+    float: left;
+    margin-right: 15px;
+    width: 45%;
+}
+
+.product-main-desc {
+    float: right;
+    width: 55%;
+}
+
+.product-main-desc h4 {
+    margin-top: 0;
+}
+
+.product-buy {
+    margin-top: 50px;
+}
+
+.buy-btn {
+    float: left;
+}
+
+.product-pricing {
+    float: right;
+}
+
+.pdp-price {
+    float: left;
+    margin-right: 15px;
+}
+
+.subcat-link, .buy-btn {
+    margin-top: 15px;
+    display: block;
+    width: 120px;
+    text-align: center;
+    color: black;
+    background: #D9DDDE;
+    border: 2px solid black;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding: 2px 2px;
+}
+
+.buy-btn {
+    margin-top: 0;
+}
+
+.subcat-desc {
+    margin-top: 50px; 
+}
+
+footer {
+    width: 80%;
+    margin: 10px auto 0 auto;
+    position: relative;
+    bottom: 0;
+    border-top: 3px solid black;
+}
+
+.print {
+    float: right;
+}

@@ -1,0 +1,9 @@
+header
+    div(class='header-content')
+        h1
+            a(href="/")='Shop'
+        nav(class='cat-nav')
+            ul
+                each category in categories 
+                    li
+                        a(href='/category/#{category.id}' class="cat-links")=category.name

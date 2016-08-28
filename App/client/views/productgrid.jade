@@ -1,0 +1,29 @@
+extends layout
+
+block header
+    include ./components/header.jade
+
+block breadcrumbs
+    div(class='breadcrumbs-container')
+        ul(class='breadcrumbs') 
+            li
+                a(href='/')='HOME /'
+
+block content
+    main(class='main-content container')
+        each product in products
+            - var largeView = product.image_groups[0].images[0].link.replace('large','medium');
+
+            div(class='col-lg-6')
+                h4(class='product-name')=product.name
+                div(class='product-info')
+                    a(href='#{product.primary_category_id}/#{product.id}')
+                        img(src='/images/#{largeView}', alt='#{product.name}' class='product-subnail')
+                    div(class='product-desc')
+                        p(class='product-short-desc')=product.short_description
+                        div(class='product-link')
+                            span(class='product-price') Price: #{product.currency} #{product.price}
+                            a(href='#{product.primary_category_id}/#{product.id}' class='pdp-link')='More info'
+
+block footer
+    include ./components/footer.jade

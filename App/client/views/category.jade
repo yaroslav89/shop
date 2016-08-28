@@ -1,0 +1,34 @@
+extends layout
+
+block header
+    include ./components/header.jade
+
+block breadcrumbs
+    div(class='breadcrumbs-container')
+        ul(class='breadcrumbs') 
+            li
+                a(href='/')='HOME /'
+            li
+                a(href='#{currentCategory.id}')=currentCategory.name.toUpperCase()
+                
+
+
+block content
+    main(class='main-content')
+        div(class='main-cat-info')
+            h3(class='main-cat-name')=currentCategory.name
+            p=currentCategory.page_description
+        div(class='sub-categories')
+            each subcat in currentCategory.categories
+                section(class='subcat-desc')
+                    h4=subcat.name
+                    div(class='cat-img')
+                        a(href='/category/#{currentCategory.id}/#{subcat.id}')
+                            img(src="/images/#{subcat.image}", alt="" class='category-img')
+                    p(class='category-short-desc')=subcat.page_description
+                    a(href='/category/#{currentCategory.id}/#{subcat.id}' class='subcat-link')='View category'
+
+block footer
+    include ./components/footer.jade
+
+

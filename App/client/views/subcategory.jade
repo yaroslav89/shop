@@ -1,0 +1,48 @@
+extends layout
+
+block header
+    include ./components/header.jade
+
+block breadcrumbs
+    -
+        var catLink = '';
+        var subCatLink = '';
+
+        for (var cat of subCategory.categories) {
+            catLink = cat.parent_category_id;
+            for (var subCatData of cat.categories) {
+                subCatLink = subCatData.parent_category_id;
+            }
+        }
+
+    div(class='breadcrumbs-container')
+        ul(class='breadcrumbs')
+            li
+                a(href='/')='HOME /'
+            li
+                a(href='/category/#{catLink}') #{catLink.toUpperCase()} /
+            li
+                a(href='/category/#{catLink}/#{subCatLink}')=subCatLink.toUpperCase() 
+
+block content
+    main(class='main-content')
+        each data in subCategory.categories
+            - var parentCat = data.parent_category_id
+            div(class='main-cat-info')
+                h3(class='main-cat-name')=data.name
+                p=data.page_description
+            div(class='sub-categories')
+                each subcat in data.categories
+                    section(class='subcat-desc')
+                        h4=subcat.name
+                        div(class='cat-img')
+                            a(href='/products/#{subcat.id}')
+                                img(src="/images/#{subcat.image}", alt="" class='category-img')
+                        p(class='category-short-desc')=subcat.page_description
+                        a(href='/products/#{subcat.id}' class='subcat-link')='View products'
+
+block footer 
+    include ./components/footer.jade
+
+
+

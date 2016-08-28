@@ -1,0 +1,14 @@
+extends layout
+
+block header
+    include ./components/header.jade
+
+block content
+    main(class='main-content')
+        each cat in categories 
+            h3
+                a(href='/category/#{cat.id}' class='main-cat-name')=cat.name
+            p=cat.page_description
+
+block footer 
+    include ./components/footer.jade
